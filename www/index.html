@@ -3,15 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>dbio</title>
-    <link rel="stylesheet" href="https://ipfs.io/ipfs/QmPEJx9Bur2NNDPtBNT5zQ6bBnCkgYtKeNBAWRXx4j5hf2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div id="page_home">
       <div class="jumbotron">
-        <h1>
-          dbio - decentralized profiles
-        </h1>
+        <div class="jumbotron-inner">
+          <h1>
+            dbio
+          </h1>
+          <p>
+              Instantly publish your profile to IPFS. No server required.
+          </p>
+        </div>
       </div>
 
       <div class="container form">
@@ -23,24 +27,31 @@
       </div>
     </div>
     <div class="about">
-      <div class="container">
+      <div class="about-inner">
         <h2>What is dbio?</h2>
         <p>
-          Dbio is a simple tool, similar to about.me, that you can use to share
-          your bio. Unlike about.me, dbio users don't have to trust a central
-          server: all the content you publish is added to IPFS - the permanet
-          web. You seed your own bio from your own IPFS node.
+          dbio aims to recreate the simplicity of <a href="https://about.me">
+          about.me</a> using IPFS. Simply fill out the form, hit publish, and
+          dbio will create and store a JSON file representing your profile on
+          your IPFS node. You can then view your profile through the website,
+          accessing it from its hash.
         </p>
 
         <p>
-          By the way, you can only publish to writeable nodes. Make sure the
-          gateway you're using is writeable!
+            To use this app, your node needs to be writable and have CORS
+            enabled. <a href="https://codeberg.org/njms/dbio/README.md#Using">
+            See here</a> for instructions on how to prepare your node.
         </p>
       </div>
     </div>
     <div class="footer">
       <div class="container">
-        <p>&#169; 2018 natjms</p>
+        <p>
+            Made with ❤️ by <a href="https://njms.ca">njms</a>. All code shared
+            under the
+            <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL</a>
+            (<a href="https://codeberg.org/njms/dbio">Source</a>).
+        </p>
       </div>
     </div>
 

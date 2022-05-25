@@ -55,7 +55,7 @@ view model =
           ]
       , div [ class "content col-md-4 col-sm-4"]
           [ h1 [] [ text model.name ]
-          , p [ class "subheader" ] [ text model.location ]
+          , p [ class "subheader" ] [ text ("📍 " ++ model.location) ]
           , p [ innerHtml model.bio ] []
           , div [ class "container-fluid" ]
               [ div [ class "row" ]

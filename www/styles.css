@@ -1,66 +1,88 @@
 body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: #2c3e50;
+  margin: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+a { color: #3498db; text-decoration: none; }
+a:hover { color: #3498db; text-decoration: underline; }
 
 .jumbotron {
   background-color: #3498db;
-  height: 200px;
+  height: 50vh;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.jumbotron h1 {
+.jumbotron-inner {
   text-align: center;
 }
 
 .form {
   padding-top: 40px;
-
   padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-inner {
-  width: 500px;
+  width: 520px;
   max-width: 90%;
-  margin: 0 auto
+}
+
+form > #elm > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 input, textarea {
   width: 100%;
-  padding: 10px;
+  padding: 1em;
+  margin-bottom: 0.5em;
   border: none;
-  border-bottom: 1px solid black
+  border-bottom: 1px solid black;
 }
 
 input[type=submit] {
   border-bottom: none;
   background-color: #3498db;
   color: #2c3e50;
-  font-weight: bold
-}
-
-.two-inputs > input {
-  width: 49%
-}
-
-.two-inputs > input:last-child {
-  margin-left: 5px
+  width: auto;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 0.5em;
+  font-weight: bold;
 }
 
 .about {
   background-color: #ecf0f1;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-  font-size: 1.5em
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.about-inner {
+  width: 75%;
 }
 
 .about h2 {
-  font-size: 2em;
   line-height: 2em;
 }
 
 .footer {
-  padding-top: 10px;
-  font-size: 1.2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   text-align: center;
   background-color: #34495e;
   color: #ecf0f1

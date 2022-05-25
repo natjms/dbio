@@ -22,7 +22,7 @@ function home_page(node) {
   app.ports.pub.subscribe(function(obj) {
     const string = JSON.stringify(obj);
 
-    const stored_hash = ipfs.add(Buffer.from(string))
+    ipfs.add(Buffer.from(string))
       .catch(error => alert(error))
       .then(file => app.ports.new_hash.send(file[0].hash));
   });
