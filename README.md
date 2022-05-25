@@ -16,7 +16,7 @@ $ ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "POST
 
 First, like all good Node.JS projects, you've got to run:
 
-````
+```
 $ npm install
 ```
 
