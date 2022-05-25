@@ -5,15 +5,22 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server www -a 127.0.0.1 -p 3000",
-    "build": "browserify js/index.js > www/bundle.js && elm make src/Publish.elm --output=www/elm.js && elm make src/Retrieve.elm --output=www/u/elm.js"
+    "build": "browserify js/index.js > www/bundle.js && tar-packages/elm/elm-make src/Publish.elm --output=www/elm.js && tar-packages/elm/elm-make src/Retrieve.elm --output=www/u/elm.js",
+    "install-tarballs": "tar-dependency install"
   },
   "keywords": [],
   "author": "natjms",
   "license": "BSD-3-Clause",
   "devDependencies": {
     "browserify": "^13.1.1",
-    "ipfs-api": "^11.1.0",
     "http-server": "^0.9.0",
-    "elm": "^0.18.0"
+    "ipfs-api": "^11.1.0",
+    "tar-dependency": "^0.1.0"
+  },
+  "tarDependencies": {
+    "tar-packages/elm": {
+      "url": "https://github.com/lydell/elm-old-binaries/releases/download/main/0.18.0-linux-x64.tar.gz",
+      "strip": 1
+    }
   }
 }
